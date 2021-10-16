@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -16,6 +18,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        dataBinding true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -33,11 +38,57 @@ android {
 
 dependencies {
 
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.6.0'
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    def binding_version="3.1.2"
+    kapt "com.android.databinding:compiler:$binding_version"
+
+    def intuit_version="1.0.6"
+    implementation "com.intuit.sdp:sdp-android:$intuit_version"
+    implementation "com.intuit.ssp:ssp-android:$intuit_version"
+
+    def material_version="1.2.1"
+    implementation "com.google.android.material:material:$material_version"
+
+    def retrofit_version="2.6.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+
+    def interceptor_version="3.4.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptor_version"
+
+    def coroutines_version="1.3.7"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+
+    def activity_version="1.1.0"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+    def fragment_version="1.2.5"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
+    def simple_crop_view_version="1.1.8"
+    implementation "com.isseiaoki:simplecropview:$simple_crop_view_version"
+
+    def glide_version="4.11.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+    def app_start_up="1.0.0"
+    implementation "androidx.startup:startup-runtime:$app_start_up"
+
+
+    def dagger_version = "2.28"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+
+
 }

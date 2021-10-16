@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TotalityCorpAssignment</string>
+    <string name="txtTakeSelfie">Take Selfie</string>
+    <string name="txtPickImage">Pick Image</string>
 </resources>
