@@ -2,4 +2,14 @@
     <string name="app_name">TotalityCorpAssignment</string>
     <string name="txtTakeSelfie">Take Selfie</string>
     <string name="txtPickImage">Pick Image</string>
+    <string name="txtDone">Done</string>
+    <string name="txtRetry">Retry</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="txtUndo">Undo</string>
+    <string name="txtRotate">Rotate</string>
+    <string name="txtCrop">Crop</string>
+    <string name="txtSave">Save</string>
 </resources>

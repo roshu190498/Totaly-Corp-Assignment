@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CropFragment">
+
+    <com.isseiaoki.simplecropview.CropImageView
+        android:id="@+id/cropImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstraints"
+        android:padding="@dimen/_16sdp"
+        app:scv_crop_mode="free"
+        app:scv_background_color="@color/white_two"
+        app:scv_overlay_color="@color/crop_image_overlay"
+        app:scv_guide_show_mode="not_show"
+        app:scv_handle_color="@color/sky_blue"
+        app:scv_guide_color="@color/sky_blue"
+        app:scv_frame_color="@color/sky_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/clBottom"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cropImage"
+        android:background="@color/cardview_dark_background"
+        android:paddingBottom="@dimen/_48sdp">
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/sky_blue"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/txtDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/_8sdp"
+            android:background="?attr/selectableItemBackground"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
